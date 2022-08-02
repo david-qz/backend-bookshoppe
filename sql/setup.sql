@@ -14,7 +14,9 @@ create table authors (
 insert into authors (name, dob, pob) values
 ('J.R.R. Tolkien', 'January 3, 1892', 'Bloemfontein, Orange Free State'),
 ('Frank Herbert', 'October 8, 1920', 'Tacoma, Washington, U.S.'),
-('Dan Simmons', 'April 4, 1948', 'Peoria, Illinois, U.S.');
+('Dan Simmons', 'April 4, 1948', 'Peoria, Illinois, U.S.'),
+('Terry Pratchett', 'April 28, 1948', 'Beaconsfield, Buckinghamshire, England'),
+('Neil Gaiman', 'November 10, 1960', 'Portchester, Hampshire, England');
 
 create table books (
     id bigint generated always as identity primary key,
@@ -34,7 +36,10 @@ insert into books (title, released) values
 ('Hyperion', 1989),
 ('The Fall of Hyperion', 1990),
 ('Endymion', 1996),
-('The Rise of Endymion', 1997);
+('The Rise of Endymion', 1997),
+('Good Omens', 1990),
+('Guards! Guards!', 1989),
+('Going Postal', 2004);
 
 create table authors_books (
     id bigint generated always as identity primary key,
@@ -56,4 +61,8 @@ insert into authors_books (author_id, book_id) values
 (3, 9),
 (3, 10),
 (3, 11),
-(3, 12);
+(3, 12),
+(4, 13),
+(4, 14),
+(4, 15),
+(5, 13);
