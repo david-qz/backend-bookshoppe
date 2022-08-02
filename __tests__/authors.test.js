@@ -41,6 +41,23 @@ describe('books route', () => {
     });
   });
 
+  it('POST /authors should add a new author', async () => {
+    const bram = {
+      name: 'Bram Stoker',
+      dob: 'November 8, 1847',
+      pob: 'Clontarf, Dublin, Ireland'
+    };
+    const resp = await request(app).post('/authors').send(bram);
+
+    expect(resp.body).toEqual({
+      id: expect.any(String),
+      name: expect.any(String),
+      dob: expect.any(String),
+      pob: expect.any(String),
+      books: expect.any(Array)
+    });
+  });
+
   afterAll(() => {
     pool.end();
   });
