@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        .mono {
+            font-family: monospace;
+        }
+
+        td {
+            padding: 10px;
+        }
+    </style>
+    <title>Local Bookshoppe API</title>
+</head>
+<body>
+<h1>Local Bookshoppe API</h1>
+<h2>Routes</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Route</th>
+        <th>Description</th>
+        <th>Example</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td class="mono">GET /books</td>
+        <td>Gets a list of books.</td>
+        <td class="mono"><a href="/books">/books</a></td>
+    </tr>
+    <tr>
+        <td class="mono">GET /books/:id</td>
+        <td>Gets details about a particular book.</td>
+        <td class="mono"><a href="/books/1">/books/1</a></td>
+    </tr>
+    <tr>
+        <td class="mono">GET /authors</td>
+        <td>Gets a list of authors.</td>
+        <td class="mono"><a href="/authors">/authors</a></td>
+    </tr>
+    <tr>
+        <td class="mono">GET /authors/:id</td>
+        <td>Gets details about a particular author.</td>
+        <td class="mono"><a href="/authors/1">/authors/1</a></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
