@@ -58,6 +58,30 @@ describe('books route', () => {
     });
   });
 
+  it('POST /authors with bookIds should make a new author and associate them with sent book ids', async () => {
+    const bram = {
+      name: 'Bram Stoker',
+      dob: 'November 8, 1847',
+      pob: 'Clontarf, Dublin, Ireland',
+      bookIds: [1, 2]
+    };
+    const resp = await request(app).post('/authors').send(bram);
+
+    expect(resp.body).toEqual({
+      id: expect.any(String),
+      name: expect.any(String),
+      dob: expect.any(String),
+      pob: expect.any(String),
+      books: expect.arrayContaining([
+        expect.objectContaining({
+          id: expect.any(String),
+          title: expect.any(String),
+          released: expect.any(Number)
+        })
+      ])
+    });
+  });
+
   afterAll(() => {
     pool.end();
   });
