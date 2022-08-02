@@ -33,7 +33,7 @@ describe('books route', () => {
       pob: expect.any(String),
       books: expect.arrayContaining([
         expect.objectContaining({
-          id: expect.any(Number),
+          id: expect.any(String),
           title: expect.any(String),
           released: expect.any(Number)
         })
