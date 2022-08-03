@@ -1,0 +1,56 @@
+### GET /books
+GET http://localhost:7890/books
+
+### GET /books/1
+GET http://localhost:7890/books/1
+
+### POST /books
+POST http://localhost:7890/books
+Content-Type: application/json
+
+{
+  "title": "The Silmarillion",
+  "released": 1977
+}
+
+### POST /books with authorIds
+POST http://localhost:7890/books
+Content-Type: application/json
+
+{
+  "title": "The Silmarillion",
+  "released": 1977,
+  "authorIds": [
+    1
+  ]
+}
+
+### GET /authors
+GET http://localhost:7890/authors
+
+### GET /authors/1
+GET http://localhost:7890/authors/1
+
+### POST /authors
+POST http://localhost:7890/authors
+Content-Type: application/json
+
+{
+  "name": "Bram Stoker",
+  "dob": "November 8, 1847",
+  "pob": "Clontarf, Dublin, Ireland"
+}
+
+### POST /authors with bookIds
+POST http://localhost:7890/authors
+Content-Type: application/json
+
+{
+  "name": "Bram Stoker",
+  "dob": "November 8, 1847",
+  "pob": "Clontarf, Dublin, Ireland",
+  "bookIds": [
+    1,
+    2
+  ]
+}
