@@ -11,6 +11,7 @@
         }
 
         td {
+            max-width: 200px;
             padding: 10px;
         }
     </style>
@@ -39,6 +40,22 @@
         <td class="mono"><a href="/books/1">/books/1</a></td>
     </tr>
     <tr>
+        <td class="mono">POST /books</td>
+        <td>
+            Add a book to the database. The <span class="mono">authorIds</span> field is optional, but can be used to
+            associate the book with authors already in the database.
+        </td>
+        <td class="mono">
+            <pre>
+{
+    "title": "The Silmarillion",
+    "released": 1977,
+    "authorIds": [1]
+}
+            </pre>
+        </td>
+    </tr>
+    <tr>
         <td class="mono">GET /authors</td>
         <td>Gets a list of authors.</td>
         <td class="mono"><a href="/authors">/authors</a></td>
@@ -47,6 +64,23 @@
         <td class="mono">GET /authors/:id</td>
         <td>Gets details about a particular author.</td>
         <td class="mono"><a href="/authors/1">/authors/1</a></td>
+    </tr>
+    <tr>
+        <td class="mono">POST /author</td>
+        <td>
+            Add an author to the database. The <span class="mono">bookIds</span> field is optional, but can be used to
+            associate the author with books already in the database.
+        </td>
+        <td class="mono">
+            <pre>
+{
+  "name": "Bram Stoker",
+  "dob": "November 8, 1847",
+  "pob": "Clontarf, Dublin, Ireland",
+  "bookIds": [1, 2]
+}
+            </pre>
+        </td>
     </tr>
     </tbody>
 </table>
